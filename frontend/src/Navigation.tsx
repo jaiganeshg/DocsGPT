@@ -6,12 +6,12 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import conversationService from './api/services/conversationService';
 import userService from './api/services/userService';
 import Add from './assets/add.svg';
-import DocsGPT3 from './assets/cute_docsgpt3.svg';
 import Discord from './assets/discord.svg';
 import Expand from './assets/expand.svg';
 import Github from './assets/github.svg';
 import Hamburger from './assets/hamburger.svg';
 import Info from './assets/info.svg';
+import DocsGPT3 from './assets/pixel.png';
 import SettingGear from './assets/settingGear.svg';
 import Twitter from './assets/TwitterX.svg';
 import UploadIcon from './assets/upload.svg';
@@ -174,16 +174,12 @@ export default function Navigation({ navOpen, setNavOpen }: NavigationProps) {
         console.error(err);
       });
   }
-  useOutsideAlerter(
-    navRef,
-    () => {
-      if (isMobile && navOpen && apiKeyModalState === 'INACTIVE') {
-        setNavOpen(false);
-        setIsDocsListOpen(false);
-      }
-    },
-    [navOpen, isDocsListOpen, apiKeyModalState],
-  );
+  useOutsideAlerter(navRef, () => {
+    if (isMobile && navOpen && apiKeyModalState === 'INACTIVE') {
+      setNavOpen(false);
+      setIsDocsListOpen(false);
+    }
+  }, [navOpen, isDocsListOpen, apiKeyModalState]);
 
   /*
     Needed to fix bug where if mobile nav was closed and then window was resized to desktop, nav would still be closed but the button to open would be gone, as per #1 on issue #146
@@ -222,7 +218,7 @@ export default function Navigation({ navOpen, setNavOpen }: NavigationProps) {
         >
           <div className="my-auto mx-4 flex cursor-pointer gap-1.5">
             <img className="mb-2 h-10" src={DocsGPT3} alt="" />
-            <p className="my-auto text-2xl font-semibold">DocsGPT</p>
+            <p className="my-auto text-2xl font-semibold">PixelGPT</p>
           </div>
           <button
             className="float-right mr-5"

@@ -1,13 +1,13 @@
 //TODO - Add hyperlinks to text
 //TODO - Styling
-import DocsGPT3 from './assets/cute_docsgpt3.svg';
+import DocsGPT3 from './assets/pixel.png';
 
 export default function About() {
   return (
     <div className="mx-5 grid min-h-screen md:mx-36">
       <article className="place-items-left mx-auto my-auto flex w-full max-w-6xl flex-col gap-4 rounded-3xl bg-gray-100 p-6 text-jet dark:bg-gun-metal dark:text-bright-gray lg:p-6 xl:p-10">
         <div className="flex items-center">
-          <p className="mr-2 text-3xl">About DocsGPT</p>
+          <p className="mr-2 text-3xl">About PixelGPT</p>
           <img className="h14 mb-2" src={DocsGPT3} alt="DocsGPT" />
         </div>
         <p className="mt-4">

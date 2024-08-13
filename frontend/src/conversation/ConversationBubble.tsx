@@ -1,17 +1,17 @@
 import { forwardRef, useState } from 'react';
+import remarkGfm from 'remark-gfm';
 import Avatar from '../components/Avatar';
 import CopyButton from '../components/CopyButton';
-import remarkGfm from 'remark-gfm';
-import { FEEDBACK, MESSAGE_TYPE } from './conversationModels';
-import classes from './ConversationBubble.module.css';
 import Alert from './../assets/alert.svg';
-import Like from './../assets/like.svg?react';
 import Dislike from './../assets/dislike.svg?react';
+import Like from './../assets/like.svg?react';
+import classes from './ConversationBubble.module.css';
+import { FEEDBACK, MESSAGE_TYPE } from './conversationModels';
 
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import DocsGPT3 from '../assets/cute_docsgpt3.svg';
+import DocsGPT3 from '../assets/pixel.png';
 const DisableSourceFE = import.meta.env.VITE_DISABLE_SOURCE_FE || false;
 
 const ConversationBubble = forwardRef<

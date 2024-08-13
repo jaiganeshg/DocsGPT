@@ -6,14 +6,14 @@
   "myPlan": "My Plan",
   "about": "About",
   "inputPlaceholder": "Type your message here...",
-  "tagline": "DocsGPT uses GenAI, please review critical information using sources.",
+  "tagline": "PixelGPT uses GenAI. All rights reserved to PixelGPT",
   "sourceDocs": "Source Docs",
   "none": "None",
   "cancel": "Cancel",
   "demo": [
     {
-      "header": "Learn about DocsGPT",
-      "query": "What is DocsGPT?"
+      "header": "Learn about PixelGPT",
+      "query": "What is PixelGPT?"
     },
     {
       "header": "Summarize documentation",
@@ -113,8 +113,8 @@
   },
   "sharedConv": {
     "subtitle": "Created with",
-    "button": "Get Started with DocsGPT",
-    "meta": "DocsGPT uses GenAI, please review critical information using sources."
+    "button": "Get Started with PixelGPT",
+    "meta": "All rights reserved to PixelGPT"
   },
   "convTile": {
     "share": "Share",

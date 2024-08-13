@@ -1,15 +1,15 @@
 version: "3.9"
 
 services:
-  frontend:
-    build: ./frontend
-    environment:
-      - VITE_API_HOST=http://localhost:7091
-      - VITE_API_STREAMING=$VITE_API_STREAMING
-    ports:
-      - "5173:5173"
-    depends_on:
-      - backend
+  # frontend:
+  #   build: ./frontend
+  #   environment:
+  #     - VITE_API_HOST=http://localhost:7091
+  #     - VITE_API_STREAMING=$VITE_API_STREAMING
+  #   ports:
+  #     - "5173:5173"
+  #   depends_on:
+  #     - backend
 
   backend:
     build: ./application
@@ -51,7 +51,7 @@ services:
       - 6379:6379
 
   mongo:
-    image: mongo:6
+    image: mongo:4.4
     ports:
       - 27017:27017
     volumes:

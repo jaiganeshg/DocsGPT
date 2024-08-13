@@ -1,31 +1,32 @@
-import { Query } from './conversationModels';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
+import { Query } from './conversationModels';
 
 import conversationService from '../api/services/conversationService';
-import ConversationBubble from './ConversationBubble';
 import Send from '../assets/send.svg';
 import Spinner from '../assets/spinner.svg';
+import ConversationBubble from './ConversationBubble';
 import {
-  selectClientAPIKey,
-  setClientApiKey,
-  updateQuery,
   addQuery,
   fetchSharedAnswer,
+  selectClientAPIKey,
   selectStatus,
+  setClientApiKey,
+  setFetchedData,
+  setIdentifier,
+  updateQuery,
 } from './sharedConversationSlice';
-import { setIdentifier, setFetchedData } from './sharedConversationSlice';
 
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../store';
 
+import { useSelector } from 'react-redux';
 import {
   selectDate,
-  selectTitle,
   selectQueries,
+  selectTitle,
 } from './sharedConversationSlice';
-import { useSelector } from 'react-redux';
 const apiHost = import.meta.env.VITE_API_HOST || 'https://docsapi.arc53.com';
 
 export const SharedConversation = () => {
@@ -210,7 +211,7 @@ export const SharedConversation = () => {
             <h2 className="font-semi-bold text-base text-chinese-black dark:text-chinese-silver">
               {t('sharedConv.subtitle')}{' '}
               <a href="/" className="text-[#007DFF]">
-                DocsGPT
+                PixelGPT
               </a>
             </h2>
             <h2 className="font-semi-bold text-base text-chinese-black dark:text-chinese-silver">
